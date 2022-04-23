@@ -1,4 +1,4 @@
-package com.negri.lgbtrights.infrastructure.controller;
+package com.negri.lgbtrights.controller;
 
 import java.util.List;
 
@@ -7,24 +7,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.negri.lgbtrights.domain.CountrySummary;
+import com.negri.lgbtrights.dto.CountrySummaryDto;
 
 @RestController(value = "/lgbt-rights")
 public class LgbtRightsController {
-	
-	@GetMapping()
-	public ResponseEntity<List<CountrySummary>> getAllCountries(@PathVariable String coutryCode, @PathVariable String rightCode) {
+
+	@GetMapping
+	public ResponseEntity<List<CountrySummaryDto>> getAllCountries(@PathVariable String coutryCode,
+			@PathVariable String rightCode) {
 		return ResponseEntity.ok(null);
 	}
-	
+
 	@GetMapping("/country/{countryCode}")
-	public ResponseEntity<CountrySummary> getCountry(@PathVariable String coutryCode) {
+	public ResponseEntity<CountrySummaryDto> getCountry(@PathVariable String coutryCode) {
 		return ResponseEntity.ok(null);
 	}
-		
+
 	@GetMapping("/continent/{continent}")
-	public ResponseEntity<List<CountrySummary>> getCountriesByContinent(@PathVariable String continent) {
-		return ResponseEntity.ok(null);
+	public ResponseEntity<List<CountrySummaryDto>> getCountriesByContinent(@PathVariable String continent) {
+		return ResponseEntity.ok(null);		
 	}
-	
+
 }
