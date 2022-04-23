@@ -12,8 +12,8 @@ import com.negri.lgbtrights.dto.CountrySummaryDto;
 @RestController(value = "/lgbt-rights")
 public class LgbtRightsController {
 
-	@GetMapping
-	public ResponseEntity<List<CountrySummaryDto>> getAllCountries(@PathVariable String coutryCode,
+	@GetMapping("/country/{countryCode}/{rightCode}")
+	public ResponseEntity<List<CountrySummaryDto>> getSpecificRight(@PathVariable String coutryCode,
 			@PathVariable String rightCode) {
 		return ResponseEntity.ok(null);
 	}
