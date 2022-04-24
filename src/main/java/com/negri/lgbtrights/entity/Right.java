@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -14,6 +15,7 @@ import lombok.Getter;
 @Table(name = "tb_right")
 public class Right {
 	
+	@Id
 	@Column(name = "code")
 	private String code;
 	

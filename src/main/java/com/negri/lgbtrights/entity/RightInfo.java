@@ -16,7 +16,7 @@ import lombok.Getter;
 public class RightInfo  {
 	
 	@EmbeddedId
-	private RightInfoKey id;
+	private RightInfoKey rightInfoKey;
 	
 	@ManyToOne
 	@MapsId("countryId")
